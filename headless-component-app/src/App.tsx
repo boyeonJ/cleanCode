@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <Typography>글자입니다.</Typography>
+      <Typography variant='h1B'>글자입니다.</Typography>
     </>
   )
 }
