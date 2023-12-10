@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
 import { ReactElement } from "react";
+import colors from "./Color";
+
 
 const sizeStyles = {
   h2: {
@@ -28,18 +29,19 @@ const sizeStyles = {
 type Props = {
   children: ReactElement | string;
   variant?: "h2" | "h4" | "h1B" | "h4B";
+  color?: "primary" | "gray1" | "gray2" | "black";
 };
 
-const Typography = ({ children, variant = "h2" }: Props) => {
+const Typography = ({ children, variant = "h2", color = "black" }: Props) => {
   return (
-    <div
+    <span
       css={{
-        backgroundColor: "hotpink",
         ...sizeStyles[variant],
+        color: colors[color],
       }}
     >
       {children}
-    </div>
+    </span>
   );
 };
 
