@@ -27,7 +27,7 @@ const sizeStyles = {
 };
 
 type Props = {
-  children: ReactElement | string;
+  children: ReactElement | string | number;
   variant?: "h2" | "h4" | "h1B" | "h4B";
   color?: "primary" | "gray1" | "gray2" | "black";
 };
