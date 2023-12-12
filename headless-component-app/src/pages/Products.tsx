@@ -3,6 +3,7 @@ import colors from "../atoms/Color";
 import { useEffect, useState } from "react";
 import { getProduct } from "../server/apis/api/product";
 import { AxiosRequestConfig } from "axios";
+import { useQuery } from "react-query";
 
 interface Product {
   id: number;
@@ -16,15 +17,17 @@ interface Product {
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
-  const fetchPosts = async () => {
-    const res: AxiosRequestConfig<{ products: Product[] }> = await getProduct();
+  const query = useQuery('products', getProduct);
+  console.log(query);
+  // const fetchPosts = async () => {
+  //   const res: AxiosRequestConfig<{ products: Product[] }> = await getProduct();
 
-    setProducts(res?.data?.products ?? []);
-  };
+  //   setProducts(res?.data?.products ?? []);
+  // };
 
-  useEffect(() => {
-    fetchPosts();
-  }, []);
+  // useEffect(() => {
+  //   fetchPosts();
+  // }, []);
 
   return (
     <section
