@@ -1,7 +1,8 @@
 import Typography from "../atoms/Typography";
 import colors from "../atoms/Color";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import { getProduct } from "../server/apis/api/product";
+import { AxiosRequestConfig } from "axios";
 
 interface Product {
   id: number;
@@ -16,13 +17,9 @@ const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
   const fetchPosts = async () => {
-    const res = await axios({
-      method: "get",
-      url: "/products",
-    });
+    const res: AxiosRequestConfig<{ products: Product[] }> = await getProduct();
 
-    setProducts(res.data.products);
-    console.log(res);
+    setProducts(res?.data?.products ?? []);
   };
 
   useEffect(() => {

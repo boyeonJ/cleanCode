@@ -6,7 +6,7 @@ import "./index.css";
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 
 const mock = async () => {
-  const { server } = await import("./server/browser");
+  const { server } = await import("./server/mocks/browser.ts");
   server.start();
 };
 
