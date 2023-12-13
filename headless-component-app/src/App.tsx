@@ -1,15 +1,23 @@
 import "./App.css";
-import Products from "./pages/Products";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { ReactQueryDevtools } from 'react-query/devtools'
+import { ReactQueryDevtools } from "react-query/devtools";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import RootRoutes from "./pages/RootRoutes";
 
 function App() {
   const queryClient = new QueryClient();
 
+  const router = createBrowserRouter([
+    { path: "*", Component: RootRoutes },
+  ]);
+
   return (
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
-      <Products />
+      <RouterProvider router={router} />
     </QueryClientProvider>
   );
 }
