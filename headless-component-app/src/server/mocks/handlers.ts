@@ -62,4 +62,6 @@ const productsResolver = () => {
   return HttpResponse.json(products);
 };
 
-export const handlers = [http.get("/products", productsResolver)];
+export const handlers = [
+  http.get("/products", productsResolver),
+];
