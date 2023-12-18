@@ -7,6 +7,7 @@ interface Product {
   price: number;
   rate: number;
   review: number;
+  img: string;
 }
 
 const products: Product[] = [
@@ -17,6 +18,7 @@ const products: Product[] = [
     price: 1235440,
     rate: 19,
     review: 344,
+    img: "/public/product01.jpg",
   },
   {
     id: 2,
@@ -25,6 +27,7 @@ const products: Product[] = [
     price: 41600,
     rate: 40,
     review: 31258,
+    img: "/public/product01.jpg",
   },
   {
     id: 3,
@@ -33,6 +36,7 @@ const products: Product[] = [
     price: 17980,
     rate: 25,
     review: 4475,
+    img: "/public/product01.jpg",
   },
   {
     id: 4,
@@ -41,6 +45,7 @@ const products: Product[] = [
     price: 929900,
     rate: 26,
     review: 250,
+    img: "/public/product01.jpg",
   },
   {
     id: 5,
@@ -49,11 +54,14 @@ const products: Product[] = [
     price: 2242719,
     rate: 7,
     review: 22,
+    img: "/public/product01.jpg",
   },
 ];
 
 const productsResolver = () => {
-  return HttpResponse.json({ products });
+  return HttpResponse.json(products);
 };
 
-export const handlers = [http.get("/products", productsResolver)];
+export const handlers = [
+  http.get("/products", productsResolver),
+];

@@ -32,7 +32,7 @@ type Props = {
   color?: "primary" | "gray1" | "gray2" | "black";
 };
 
-const Typography = ({ children, variant = "h2", color = "black" }: Props) => {
+const Typography = ({ children, variant = "h2", color = "black"}: Props) => {
   return (
     <span
       css={{
