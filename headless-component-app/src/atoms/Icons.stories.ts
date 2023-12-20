@@ -1,21 +1,21 @@
 import type { Meta, StoryObj} from '@storybook/react';
-import Typography from "./Typography";
+import Icons from "./Icons";
 
 const meta = {
-    title: 'Atoms/Typography',
-    component: Typography,
+    title: 'Atoms/Icons',
+    component: Icons,
     parameters: {
       layout: 'centered',
     },
     tags: ['autodocs'],
-} satisfies Meta<typeof Typography>;
+} satisfies Meta<typeof Icons>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-    args: {
-        children: 'h2'
-    },
-  };
+  args: {
+      name: 'search'
+  },
+};
