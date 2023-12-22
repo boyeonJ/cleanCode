@@ -40,17 +40,17 @@ const Products = () => {
             }}
           >
             <img src={product.img} css={{width: '100%'}}/>
-            <Typography variant="h4" color="gray1">
+            <Typography variant="h5" color="gray1">
               {product.brand}
             </Typography>
-            <Typography variant="h2">{product.name}</Typography>
+            <Typography variant="h3">{product.name}</Typography>
             <div>
-              <Typography variant="h1B" color="primary">
+              <Typography variant="h2B" color="primary">
                 {`${product.rate}%`}
               </Typography>
-              <Typography variant="h1B">{product.price}</Typography>
+              <Typography variant="h2B">{product.price}</Typography>
             </div>
-            <Typography variant="h4B" color="gray2">
+            <Typography variant="h5B" color="gray2">
               {`리뷰 ${product.review}`}
             </Typography>
           </div>

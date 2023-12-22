@@ -4,22 +4,27 @@ import colors from "./Color";
 
 
 const sizeStyles = {
-  h2: {
+  h3: {
     fontSize: "13px",
     fontWeight: "400",
     lineHeight: "17px",
   },
-  h4: {
+  h5: {
     fontSize: "11px",
     fontWeight: "400",
     lineHeight: "13px",
   },
-  h1B: {
+  h2B: {
     fontSize: "17px",
     lineHeight: "23px",
     fontWeight: "700",
   },
-  h4B: {
+  h1B: {
+    fontSize: "18px",
+    lineHeight: "23px",
+    fontWeight: "700",
+  },
+  h5B: {
     fontSize: "11px",
     lineHeight: "16px",
     fontWeight: "700",
@@ -28,11 +33,11 @@ const sizeStyles = {
 
 type Props = {
   children: ReactElement | string | number;
-  variant?: "h2" | "h4" | "h1B" | "h4B";
+  variant?: "h3" | "h5" | "h1B" | "h2B" | "h5B";
   color?: "primary" | "gray1" | "gray2" | "black";
 };
 
-const Typography = ({ children, variant = "h2", color = "black"}: Props) => {
+const Typography = ({ children, variant = "h3", color = "black"}: Props) => {
   return (
     <span
       css={{
