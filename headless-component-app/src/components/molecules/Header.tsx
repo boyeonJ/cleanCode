@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
-import colors from "./Color";
-import Icons from "./Icons";
-import Typography from "./Typography";
+import colors from "../atoms/Color";
+import Icons from "../atoms/Icons";
+import Typography from "../atoms/Typography";
 
 const breakpoints = [576, 768, 992, 1200];
 const minq = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);

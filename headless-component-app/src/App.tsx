@@ -6,7 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import RootRoutes from "./pages/RootRoutes";
-import Nav from "./atoms/Nav";
+import Nav from "./components/molecules/Header";
 
 function App() {
   const queryClient = new QueryClient();

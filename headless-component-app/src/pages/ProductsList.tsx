@@ -1,4 +1,4 @@
-import Typography from "../atoms/Typography";
+import Typography from "../components/atoms/Typography";
 import { Link } from "react-router-dom";
 import { useProducts } from "../hooks/query";
 
