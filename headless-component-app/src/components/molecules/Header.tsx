@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
 
 import colors from "../atoms/Color";
 import Icons from "../atoms/Icons";
@@ -9,79 +8,89 @@ const breakpoints = [576, 768, 992, 1200];
 const minq = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
 const maxq = breakpoints.map((bp) => `@media (max-width: ${bp}px)`);
 
-const Nav = ({ user }: { user: string }) => {
+const Header = () => {
   return (
-    <nav
+    <header
       css={{
-        backgroundColor: colors.white,
-        position: "fixed",
-        top: 0,
-        width: "100%",
         height: "80px",
-        borderBottom: `3px solid ${colors.gray3}`,
-        padding: '1rem 2rem',
-        boxSizing: 'border-box'
+        marginBottom: "2rem",
       }}
     >
       <div
-        className="nav-container"
         css={{
-          position: "relative",
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "space-between",
+          backgroundColor: colors.white,
+          position: "fixed",
+          top: 0,
+          width: "100%",
+          height: "80px",
+          borderBottom: `3px solid ${colors.gray3}`,
+          padding: "1rem 2rem",
+          boxSizing: "border-box",
         }}
       >
-        <Icons
-          name="menu"
-          size="large"
-          style={{
-            [minq[1]]: {
-              display: "none",
-            },
+        <div
+          className="header-container"
+          css={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
           }}
-        />
+        >
+          <Icons
+            name="menu"
+            size="large"
+            style={{
+              [minq[1]]: {
+                display: "none",
+              },
+            }}
+          />
 
-        <img src="/src/assets/logo.png" css={{ height: "2rem" }} />
+          <img src="/src/assets/logo.png" css={{ height: "2rem" }} />
 
-        <ul
-          className="nav-links"
-          css={[
-            { display: "flex", flexDirection: "row", padding: 0 },
-            {
+          <nav
+            css={{
               [maxq[1]]: {
                 display: "none",
               },
-              li:{
-                marginRight: '3rem'
-              }
-            },
-          ]}
-        >
-          <li>
-            <a href="">
-              <Typography variant="h1B">쇼핑</Typography>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <Typography variant="h1B">장바구니</Typography>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <Typography variant="h1B">쿠폰</Typography>
-            </a>
-          </li>
-        </ul>
+            }}
+          >
+            <ul
+              css={{
+                display: "flex",
+                flexDirection: "row",
+                padding: 0,
+                li: {
+                  marginRight: "3rem",
+                },
+              }}
+            >
+              <li>
+                <a href="">
+                  <Typography variant="h1B">쇼핑</Typography>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <Typography variant="h1B">장바구니</Typography>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <Typography variant="h1B">쿠폰</Typography>
+                </a>
+              </li>
+            </ul>
+          </nav>
 
-        <div className="nav-right">
-          <Icons name="account_circle" size="large" />
+          <div className="header-right">
+            <Icons name="account_circle" size="large" />
+          </div>
         </div>
       </div>
-    </nav>
+    </header>
   );
 };
 
-export default Nav;
+export default Header;

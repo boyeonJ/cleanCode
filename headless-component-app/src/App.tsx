@@ -6,7 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import RootRoutes from "./pages/RootRoutes";
-import Nav from "./components/molecules/Header";
+import Header from "./components/molecules/Header";
 
 function App() {
   const queryClient = new QueryClient();
@@ -18,7 +18,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
-      <Nav/>
+      <Header/>
       <RouterProvider router={router} />
     </QueryClientProvider>
   );
