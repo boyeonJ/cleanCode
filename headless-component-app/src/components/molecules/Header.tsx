@@ -1,19 +1,15 @@
 /** @jsxImportSource @emotion/react */
 
+import { maxq, minq } from "../../utils/style";
 import colors from "../atoms/Color";
 import Icons from "../atoms/Icons";
 import Typography from "../atoms/Typography";
-
-const breakpoints = [576, 768, 992, 1200];
-const minq = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
-const maxq = breakpoints.map((bp) => `@media (max-width: ${bp}px)`);
 
 const Header = () => {
   return (
     <header
       css={{
         height: "80px",
-        marginBottom: "2rem",
       }}
     >
       <div
@@ -68,17 +64,17 @@ const Header = () => {
             >
               <li>
                 <a href="">
-                  <Typography variant="h1B">쇼핑</Typography>
+                  <Typography variant="h2B">쇼핑</Typography>
                 </a>
               </li>
               <li>
                 <a href="">
-                  <Typography variant="h1B">장바구니</Typography>
+                  <Typography variant="h2B">장바구니</Typography>
                 </a>
               </li>
               <li>
                 <a href="">
-                  <Typography variant="h1B">쿠폰</Typography>
+                  <Typography variant="h2B">쿠폰</Typography>
                 </a>
               </li>
             </ul>

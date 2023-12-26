@@ -1,17 +1,7 @@
-import Typography from "../components/atoms/Typography";
 import { Link } from "react-router-dom";
 import { useProducts } from "../hooks/query";
 import ProductInfo from "../components/molecules/ProductInfo";
-
-export interface Product {
-  id: number;
-  brand: string;
-  name: string;
-  price: number;
-  rate: number;
-  review: number;
-  img: string;
-}
+import { Product } from "../utils/type";
 
 const Products = () => {
   const products = useProducts();
@@ -20,6 +10,7 @@ const Products = () => {
     <main css={{ padding: "0 2rem" }}>
       <section
         css={{
+          marginTop: '2rem',
           display: "grid",
           gridTemplateColumns: "repeat(4, 23%)",
           justifyContent: "space-between",
