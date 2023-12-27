@@ -12,10 +12,10 @@ const ProductInfo = (product: Product) => {
       }}
     >
       <img src={product.img} css={{ width: "100%", maxWidth: '500px' }} />
-      <Typography variant="h5" color="gray1">
+      <Typography variant="h6" color="gray1">
         {product.brand}
       </Typography>
-      <Typography variant="h3">{product.name}</Typography>
+      <Typography variant="h4">{product.name}</Typography>
       <div>
         <Typography variant="h3B" color="primary">
           {`${product.rate}%`}

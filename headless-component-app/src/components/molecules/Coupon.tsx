@@ -24,10 +24,10 @@ const Coupon = (coupon: CouponType) => {
         </div>
         <ul css={{ paddingLeft: "20px", listStyleType: "circle !important" }}>
           <li>
-            <Typography variant="h5">{`${coupon.minimumPayment}부터 적용 가능`}</Typography>
+            <Typography variant="h6">{`${coupon.minimumPayment}부터 적용 가능`}</Typography>
           </li>
           <li>
-            <Typography variant="h5">{`${coupon.dueDate}까지`}</Typography>
+            <Typography variant="h6">{`${coupon.dueDate}까지`}</Typography>
           </li>
         </ul>
         <Typography color="primary" variant="h2B">

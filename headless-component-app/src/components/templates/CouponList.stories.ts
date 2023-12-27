@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import CouponList from "../../pages/CouponsList";
+import CouponList from "../../pages/Coupons";
 const meta = {
   title: "Templates/CouponList",
   component: CouponList,

@@ -33,7 +33,7 @@ const coupons: CouponType[] = [
     },
 ];
 
-const CouponsList = () => {
+const Coupons = () => {
   return (
     <main css={{ padding: "2rem", backgroundColor: colors.gray3}}>
       <section
@@ -52,4 +52,4 @@ const CouponsList = () => {
   );
 };
 
-export default CouponsList;
+export default Coupons;

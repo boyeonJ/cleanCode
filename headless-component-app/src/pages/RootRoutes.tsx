@@ -1,14 +1,16 @@
 import { Route, Routes } from "react-router-dom";
-import ProductsList from "./ProductsList";
+import Products from "./Products";
 import ProductDetail from "./ProductDetail";
-import CouponsList from "./CouponsList";
+import Coupons from "./Coupons";
+import Carts from "./Carts";
 
 const RootRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<ProductsList />} />
+      <Route path="/" element={<Products/>} />
       <Route path="/detail/:productId" element={<ProductDetail />} />
-      <Route path="/coupons" element={<CouponsList />} />
+      <Route path="/coupons" element={<Coupons />} />
+      <Route path="/carts" element={<Carts />} />
     </Routes>
   );
 };
