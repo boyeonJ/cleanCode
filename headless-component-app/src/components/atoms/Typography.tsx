@@ -2,8 +2,12 @@
 import { ReactElement } from "react";
 import colors from "./Color";
 
-
 const sizeStyles = {
+  h1: {
+    fontSize: "24px",
+    lineHeight: "28px",
+    fontWeight: "400",
+  },
   h3: {
     fontSize: "13px",
     fontWeight: "400",
@@ -14,17 +18,27 @@ const sizeStyles = {
     fontWeight: "400",
     lineHeight: "13px",
   },
-  h2B: {
-    fontSize: "17px",
-    lineHeight: "23px",
+  h0B: {
+    fontSize: "40px",
+    lineHeight: "38px",
     fontWeight: "700",
   },
   h1B: {
+    fontSize: "24px",
+    lineHeight: "28px",
+    fontWeight: "700",
+  },
+  h2B: {
     fontSize: "18px",
     lineHeight: "23px",
     fontWeight: "700",
   },
-  h5B: {
+  h3B: {
+    fontSize: "17px",
+    lineHeight: "23px",
+    fontWeight: "700",
+  },
+  h6B: {
     fontSize: "11px",
     lineHeight: "16px",
     fontWeight: "700",
@@ -33,16 +47,22 @@ const sizeStyles = {
 
 type Props = {
   children: ReactElement | string | number;
-  variant?: "h3" | "h5" | "h1B" | "h2B" | "h5B";
-  color?: "primary" | "gray1" | "gray2" | "black";
+  variant?: "h1" | "h3" | "h5" | "h0B" | "h1B" | "h2B" | "h3B" | "h6B";
+  color?: "primary" | "gray1" | "gray2" | "black" | "white";
 };
 
-const Typography = ({ children, variant = "h3", color = "black"}: Props) => {
+const Typography = ({
+  children,
+  variant = "h3",
+  color = "black",
+  ...props
+}: Props) => {
   return (
     <span
       css={{
         ...sizeStyles[variant],
         color: colors[color],
+        ...props,
       }}
     >
       {children}

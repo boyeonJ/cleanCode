@@ -1,4 +1,4 @@
-import {Product} from "../../pages/ProductsList";
+import { Product } from "../../utils/type";
 import Typography from "../atoms/Typography";
 
 const ProductInfo = (product: Product) => {
@@ -11,18 +11,18 @@ const ProductInfo = (product: Product) => {
         alignItems: "start",
       }}
     >
-      <img src={product.img} css={{ width: "100%" }} />
+      <img src={product.img} css={{ width: "100%", maxWidth: '500px' }} />
       <Typography variant="h5" color="gray1">
         {product.brand}
       </Typography>
       <Typography variant="h3">{product.name}</Typography>
       <div>
-        <Typography variant="h2B" color="primary">
+        <Typography variant="h3B" color="primary">
           {`${product.rate}%`}
         </Typography>
-        <Typography variant="h2B">{product.price}</Typography>
+        <Typography variant="h3B">{product.price}</Typography>
       </div>
-      <Typography variant="h5B" color="gray2">
+      <Typography variant="h6B" color="gray2">
         {`리뷰 ${product.review}`}
       </Typography>
     </div>
